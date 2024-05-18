@@ -5,7 +5,7 @@ import Navbar from './Components/NavBar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 
 function App() {
-  const [subject, setSubject] = useState("nature");
+  const [subject, setSubject] = useState("popular");
 
   return (
     <>
