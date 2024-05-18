@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import MainSection from './Components/MainSection/MainSection';
+import Navbar from './Components/NavBar/Navbar';
+import Sidebar from './Components/Sidebar/Sidebar';
 
 function App() {
+  const [subject, setSubject] = useState("nature");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar setSubject={setSubject}/>
+      <Sidebar setSubject={setSubject}/>
+      <MainSection subject={subject}/>
+    </>
   );
 }
 
